@@ -63,7 +63,6 @@ class HomePage extends StatelessWidget {
               children: [
                 Text(
                   "Hola Diana,",
-                  textAlign: TextAlign.left,
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 const SizedBox(height: 10),
@@ -78,7 +77,7 @@ class HomePage extends StatelessWidget {
                       .copyWith(color: Colors.blue),
                   textAlign: TextAlign.right,
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 15),
                 Text("Últimas Actividades",
                     style: Theme.of(context).textTheme.titleSmall),
                 const SizedBox(height: 5),
@@ -99,9 +98,9 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 5),
                 CircularPercentIndicator(
-                  radius: 80.0,
+                  radius: 70.0,
                   lineWidth: 14.0,
                   percent: 0.7,
                   center: const Text(
@@ -113,7 +112,7 @@ class HomePage extends StatelessWidget {
                   animation: true,
                   animationDuration: 1200,
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 5),
                 BottomNavigationBar(
                   items: const <BottomNavigationBarItem>[
                     BottomNavigationBarItem(

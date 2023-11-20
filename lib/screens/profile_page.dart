@@ -9,8 +9,8 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-  double sliderValueHeight = 180;
-  double sliderValueWeight = 70;
+  double sliderValueHeight = 150;
+  double sliderValueWeight = 50;
 
   @override
   Widget build(BuildContext context) {
@@ -125,7 +125,7 @@ Column _buildColumn(IconData icon, String label, String plus) {
       Container(
         padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
         decoration: const BoxDecoration(
-          color: Colors.purple,
+          color: Color(0xFF724CF9),
           borderRadius: BorderRadius.all(Radius.circular(8)),
         ),
         child: Column(
@@ -145,4 +145,3 @@ Column _buildColumn(IconData icon, String label, String plus) {
     ],
   );
 } // método _buildButtonColumn
-
