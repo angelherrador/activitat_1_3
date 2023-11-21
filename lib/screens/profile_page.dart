@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../models/data_file.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -82,8 +83,8 @@ class _ProfilePageState extends State<ProfilePage> {
                     Slider(
                         value: sliderValueHeight,
                         max: 240,
-                        activeColor: Theme.of(context).colorScheme.tertiary,
-                        inactiveColor: Theme.of(context).colorScheme.secondary,
+                        activeColor: Theme.of(context).colorScheme.secondary,
+                        inactiveColor: Theme.of(context).colorScheme.primary,
                         label: sliderValueHeight.round().toString(),
                         onChanged: (double value) {
                           setState(() => sliderValueHeight = value);
@@ -98,8 +99,8 @@ class _ProfilePageState extends State<ProfilePage> {
                     Slider(
                         value: sliderValueWeight,
                         max: 300,
-                        activeColor: Theme.of(context).colorScheme.tertiary,
-                        inactiveColor: Theme.of(context).colorScheme.secondary,
+                        activeColor: Theme.of(context).colorScheme.secondary,
+                        inactiveColor: Theme.of(context).colorScheme.primary,
                         label: sliderValueWeight.round().toString(),
                         onChanged: (double value) {
                           setState(() {
@@ -116,7 +117,6 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 }
 
-
 Column _buildColumn(IconData icon, String label, String plus) {
   return Column(
     mainAxisSize: MainAxisSize.min,
@@ -125,19 +125,21 @@ Column _buildColumn(IconData icon, String label, String plus) {
       Container(
         padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
         decoration: const BoxDecoration(
-          color: Color(0xFF724CF9),
+          color: Color(0xFFCA7DF9),
           borderRadius: BorderRadius.all(Radius.circular(8)),
         ),
         child: Column(
           children: [
             Icon(icon),
-            Text(label, style: const TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w400,
-            )),
-            Text(plus, style: const TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.w400,
+            Text(label,
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w400,
+                )),
+            Text(plus,
+                style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w400,
                 )),
           ],
         ),

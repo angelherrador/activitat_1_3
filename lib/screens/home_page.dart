@@ -1,28 +1,12 @@
 import 'package:activitat_1_3/screens/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+
 import '../models/data_file.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
   String name = '';
-  final List<Activities> activity = [
-    Activities(
-        sportActivity: "Running",
-        dateActivity: "18/11/2023",
-        timeActivity: "18:20",
-        distanceActivity: 7.310),
-    Activities(
-        sportActivity: "Jumping",
-        dateActivity: "15/10/2022",
-        timeActivity: "13:45",
-        distanceActivity: 6.550),
-    Activities(
-        sportActivity: "Running",
-        dateActivity: "10/10/2022",
-        timeActivity: "19:02",
-        distanceActivity: 7.300),
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -70,12 +54,12 @@ class HomePage extends StatelessWidget {
                     style: Theme.of(context).textTheme.bodyMedium),
                 const SizedBox(height: 5),
                 Text(
+                  textAlign: TextAlign.right,
                   'Más detalles',
                   style: Theme.of(context)
                       .textTheme
                       .titleSmall!
                       .copyWith(color: Colors.blue),
-                  textAlign: TextAlign.right,
                 ),
                 const SizedBox(height: 15),
                 Text("Últimas Actividades",
