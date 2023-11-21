@@ -29,6 +29,9 @@ class MyApp extends StatelessWidget {
               tertiary: tertiaryColor,
               //background: Colors.white,
             ),
+        appBarTheme: AppBarTheme(
+          foregroundColor: Colors.white,
+        ),
       ),
       home: HomePage(),
     );

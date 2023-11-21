@@ -35,7 +35,6 @@ class HomePage extends StatelessWidget {
         ],
         title: const Text(
           'Fitness Time',
-          style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Theme.of(context).colorScheme.primary,
       ),

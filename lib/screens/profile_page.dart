@@ -42,7 +42,6 @@ class _ProfilePageState extends State<ProfilePage> {
         ),
         title: const Text(
           'My Profile',
-          style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Theme.of(context).colorScheme.primary,
       ),
