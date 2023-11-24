@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       extendBody: true,
       appBar: AppBar(
         centerTitle: true,
@@ -43,6 +44,7 @@ class HomePage extends StatelessWidget {
           child: SizedBox(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   "Hola Diana,",
@@ -82,39 +84,42 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 const SizedBox(height: 5),
-                CircularPercentIndicator(
-                  radius: 70.0,
-                  lineWidth: 14.0,
-                  percent: 0.7,
-                  center: const Text(
-                    "70.0%",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                Center(
+                  child: CircularPercentIndicator(
+                    radius: 70.0,
+                    lineWidth: 14.0,
+                    percent: 0.7,
+                    center: const Text(
+                      "70.0%",
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                    ),
+                    progressColor: Colors.blue,
+                    footer: const Text('Objetivo mensual'),
+                    animation: true,
+                    animationDuration: 1200,
                   ),
-                  progressColor: Colors.blue,
-                  footer: const Text('Objetivo mensual'),
-                  animation: true,
-                  animationDuration: 1200,
                 ),
                 const SizedBox(height: 5),
-                BottomNavigationBar(
-                  items: const <BottomNavigationBarItem>[
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.home),
-                      label: 'Inicio',
-                    ),
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.search),
-                      label: 'Buscar',
-                    ),
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.person),
-                      label: 'Perfil',
-                    ),
-                  ],
-                )
               ],
             ),
           )),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Inicio',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Buscar',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Perfil',
+          ),
+        ],
+      ),
     );
+
   }
 }
