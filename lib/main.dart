@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
               tertiary: tertiaryColor,
               //background: Colors.white,
             ),
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           foregroundColor: Colors.white,
         ),
       ),
