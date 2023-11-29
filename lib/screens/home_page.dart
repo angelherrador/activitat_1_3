@@ -1,4 +1,5 @@
 import 'package:activitat_1_3/screens/profile_page.dart';
+import 'package:activitat_1_3/styles/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
@@ -11,7 +12,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       extendBody: true,
       appBar: AppBar(
         centerTitle: true,
@@ -34,10 +34,7 @@ class HomePage extends StatelessWidget {
             },
           )
         ],
-        title: const Text(
-          'Fitness Time',
-        ),
-        backgroundColor: Theme.of(context).colorScheme.primary,
+        title: const Text('Fitness Time',),
       ),
       body: SingleChildScrollView(
           padding: const EdgeInsets.all(8),
@@ -50,10 +47,10 @@ class HomePage extends StatelessWidget {
                   "Hola Diana,",
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
-                const SizedBox(height: 10),
-                Text("Come 5 veces al día y permanece hidratada durante el día",
-                    style: Theme.of(context).textTheme.bodyMedium),
-                const SizedBox(height: 5),
+                AppStyles.smallGap, //const SizedBox(height: 16),
+                const Text("Come 5 veces al día y permanece hidratada durante el día",
+                    style: AppStyles.body),
+                AppStyles.smallGap, //const SizedBox(height: 16),
                 Text(
                   textAlign: TextAlign.right,
                   'Más detalles',
@@ -62,10 +59,10 @@ class HomePage extends StatelessWidget {
                       .titleSmall!
                       .copyWith(color: Colors.blue),
                 ),
-                const SizedBox(height: 15),
+                AppStyles.smallGap, //const SizedBox(height: 16),
                 Text("Últimas Actividades",
                     style: Theme.of(context).textTheme.titleSmall),
-                const SizedBox(height: 5),
+                AppStyles.smallGap, //const SizedBox(height: 16),
                 for (Activities activity in activity)
                   Card(
                     child: Column(
@@ -83,7 +80,7 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                const SizedBox(height: 5),
+                AppStyles.smallGap, //const SizedBox(height: 16),
                 Center(
                   child: CircularPercentIndicator(
                     radius: 70.0,
@@ -99,7 +96,6 @@ class HomePage extends StatelessWidget {
                     animationDuration: 1200,
                   ),
                 ),
-                const SizedBox(height: 5),
               ],
             ),
           )),

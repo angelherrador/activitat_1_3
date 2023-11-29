@@ -1,4 +1,4 @@
-import 'package:activitat_1_3/design/colors.dart';
+import 'package:activitat_1_3/styles/app_styles.dart';
 import 'package:activitat_1_3/screens/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,21 +16,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Fitness Times',
       theme: ThemeData(
-        //fontFamily: GoogleFonts.montserrat().fontFamily,
-        textTheme: GoogleFonts.montserratTextTheme(
-          Theme.of(context).textTheme,
-        ),
         useMaterial3: false,
         colorScheme: Theme.of(context).colorScheme.copyWith(
-              //colorScheme: ColorScheme.fromSeed( //otra forma de hacer
-              //seedColor: seedColor,
-              primary: primaryColor,
-              secondary: secondaryColor,
-              tertiary: tertiaryColor,
-              //background: Colors.white,
-            ),
+          //colorScheme: ColorScheme.fromSeed( //otra forma de hacer
+          //seedColor: seedColor,
+          primary: AppStyles.primaryColor,
+          secondary: AppStyles.secondaryColor,
+          tertiary: AppStyles.tertiaryColor,
+          //background: Colors.white,
+        ),
+        textTheme: GoogleFonts.montserratTextTheme(),
         appBarTheme: const AppBarTheme(
           foregroundColor: Colors.white,
+          backgroundColor: AppStyles.primaryColor,
         ),
       ),
       home: HomePage(),
